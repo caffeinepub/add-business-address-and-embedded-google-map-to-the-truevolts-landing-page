@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wide training banner photo, modern classroom scene (truevolts-slider-1.dim_1600x600.jpg)\n- Wide lab/workshop photo with students coding (truevolts-slider-2.dim_1600x600.jpg)\n- Wide mentorship/discussion session photo (truevolts-slider-3.dim_1600x600.jpg)\n- Wide technology training lab interior photo (truevolts-slider-4.dim_1600x600.jpg)\n- Wide group learning session photo (truevolts-slider-5.dim_1600x600.jpg)",
+  "existing_features": [
+    {
+      "id": "feature-update-the-landing-page-slider-so-it-uses-a-dedicated-set-of-slider-images-that-are-different-from-the-images-used-in-the-training-environment-gallery-no-shared-filenames-assets-between-the-slider-and-gallery",
+      "title": "Update the landing page slider so it uses a dedicated set of slider images that are different from the images used in the Training Environment gallery (no shared filenames/assets between the slider and gallery).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-dedicated-slider-images-as-static-assets-under-frontend-public-assets-generated-and-reference-them-from-the-slider-component",
+      "title": "Add the new dedicated slider images as static assets under frontend/public/assets/generated and reference them from the slider component.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-visual-style-of-the-services-section-frontend-src-components-landing-servicessection-tsx-to-a-noticeably-different-more-polished-presentation-while-keeping-the-existing-four-services-icons-titles-descriptions-unchanged",
+      "title": "Change the visual style of the Services section (frontend/src/components/landing/ServicesSection.tsx) to a noticeably different, more polished presentation while keeping the existing four services (icons, titles, descriptions) unchanged.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-visual-style-of-the-training-environment-section-frontend-src-components-landing-gallerysection-tsx-to-a-noticeably-different-more-polished-gallery-presentation-while-keeping-the-same-9-gallery-images-and-the-section-title-text-unchanged",
+      "title": "Change the visual style of the Training Environment section (frontend/src/components/landing/GallerySection.tsx) to a noticeably different, more polished gallery presentation while keeping the same 9 gallery images and the section title text unchanged.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Use different images for the slide bar (slider) vs the gallery (no longer shared/same images)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update/change the visual style of the Services section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Update/change the visual style of the Training Environment section",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Use distinct slider vs gallery images and restyle Services + Training Environment sections",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

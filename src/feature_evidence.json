@@ -1,0 +1,79 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-landing-page-slider-so-it-uses-a-dedicated-set-of-slider-images-that-are-different-from-the-images-used-in-the-training-environment-gallery-no-shared-filenames-assets-between-the-slider-and-gallery",
+      "featureTitle": "Update the landing page slider so it uses a dedicated set of slider images that are different from the images used in the Training Environment gallery (no shared filenames/assets between the slider and gallery).",
+      "files": [
+        "frontend/src/components/landing/LandingSlider.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-new-dedicated-slider-images-as-static-assets-under-frontend-public-assets-generated-and-reference-them-from-the-slider-component",
+      "featureTitle": "Add the new dedicated slider images as static assets under frontend/public/assets/generated and reference them from the slider component.",
+      "files": [],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-change-the-visual-style-of-the-services-section-frontend-src-components-landing-servicessection-tsx-to-a-noticeably-different-more-polished-presentation-while-keeping-the-existing-four-services-icons-titles-descriptions-unchanged",
+      "featureTitle": "Change the visual style of the Services section (frontend/src/components/landing/ServicesSection.tsx) to a noticeably different, more polished presentation while keeping the existing four services (icons, titles, descriptions) unchanged.",
+      "files": [
+        "frontend/src/components/landing/ServicesSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-change-the-visual-style-of-the-training-environment-section-frontend-src-components-landing-gallerysection-tsx-to-a-noticeably-different-more-polished-gallery-presentation-while-keeping-the-same-9-gallery-images-and-the-section-title-text-unchanged",
+      "featureTitle": "Change the visual style of the Training Environment section (frontend/src/components/landing/GallerySection.tsx) to a noticeably different, more polished gallery presentation while keeping the same 9 gallery images and the section title text unchanged.",
+      "files": [
+        "frontend/src/components/landing/GallerySection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T08:01:02.007Z",
+  "summary": "Slider was updated to use dedicated truevolts-slider-*.jpg images with auto-rotation, arrows, dots, and English alt text. Services and Gallery sections were restyled. However, the Gallery section now references a new set of gallery images (changing the 9 image sources), and the required slider image assets were not added in the diff. The diff summary also indicates additional new landing-page features (testimonials, address/map, navbar link) that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Add the new dedicated slider images as static assets under frontend/public/assets/generated and reference them from the slider component.",
+      "reason": "LandingSlider.tsx references the new filenames, but the diff shows no new files added under frontend/public/assets/generated (no added files at all), so the required image assets are not present in this change set.",
+      "evidence": [
+        "frontend/src/components/landing/LandingSlider.tsx",
+        "File diff summary: \"ADDED FILES: - none\""
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Restyle the Training Environment gallery while keeping the same 9 gallery images and the section title text unchanged.",
+      "reason": "The section title remains \"Training Environment\" and still displays 9 images, but the image sources were changed to new filenames (truevolts-gallery-new-*.jpg), violating the requirement to keep the same 9 gallery images (i.e., not change sources).",
+      "evidence": [
+        "frontend/src/components/landing/GallerySection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Replaced the Training Environment gallery image set with new generated assets (truevolts-gallery-new-1..9) instead of keeping the existing 9 gallery images.",
+      "reason": "REQ-4 explicitly requires keeping the same 9 gallery images (no source changes).",
+      "evidence": [
+        "frontend/src/components/landing/GallerySection.tsx"
+      ]
+    },
+    {
+      "description": "Added a new testimonials / student reviews section and corresponding navbar link.",
+      "reason": "The BuildRequest did not request any new sections or navigation items beyond slider/gallery/services restyling and asset separation; it also states no new features unless explicitly required by the style changes.",
+      "evidence": [
+        "frontend-file-summaries.txt (mentions Navbar now including a Reviews link and a new StudentReviewsSection.tsx)"
+      ]
+    },
+    {
+      "description": "Added a contact address/map component and embedded Google Maps iframe, and updated the contact section layout to include it.",
+      "reason": "The BuildRequest explicitly lists no changes to contact form behavior and did not request adding an address/map feature.",
+      "evidence": [
+        "frontend-file-summaries.txt (mentions ContactAddressMap.tsx and ContactSection.tsx changes)"
+      ]
+    },
+    {
+      "description": "Changed global styling/tokens (landingTheme tokens, index.css palette, tailwind config) beyond the requested section-specific restyling.",
+      "reason": "The request was scoped to restyling Services and Training Environment sections and using distinct slider vs gallery images; broad design-system/global styling changes were not requested in the BuildRequest.",
+      "evidence": [
+        "frontend-file-summaries.txt (mentions landingTheme.ts tokens, frontend/src/index.css color system changes, frontend/tailwind.config.js extensions)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/landing/GallerySection.tsx",
+    "frontend/src/components/landing/LandingSlider.tsx",
+    "frontend/src/components/landing/ServicesSection.tsx",
+    "project_state.json"
+  ]
+}

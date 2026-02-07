@@ -1,0 +1,107 @@
+{
+  "kind": "build_request",
+  "title": "Use distinct slider vs gallery images and restyle Services + Training Environment sections",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the landing page slider so it uses a dedicated set of slider images that are different from the images used in the Training Environment gallery (no shared filenames/assets between the slider and gallery).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "images in slide bar and images in gallery are should different"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing slider images in frontend/src/components/landing/LandingSlider.tsx do not reference any of the gallery image filenames used in frontend/src/components/landing/GallerySection.tsx.",
+        "Slider still auto-rotates and navigation arrows + dot indicators continue to work.",
+        "All slider images have appropriate English alt text."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add the new dedicated slider images as static assets under frontend/public/assets/generated and reference them from the slider component.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "images in slide bar and images in gallery are should different"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All newly generated slider images exist in frontend/public/assets/generated with the exact filenames specified in this build request.",
+        "LandingSlider.tsx references the new filenames and renders without broken images (no 404s)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Change the visual style of the Services section (frontend/src/components/landing/ServicesSection.tsx) to a noticeably different, more polished presentation while keeping the existing four services (icons, titles, descriptions) unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change style services"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Service titles, descriptions, and icons remain exactly the same strings/icons as before.",
+        "The section has clearly updated styling (layout/spacing/typographic hierarchy/card presentation) compared to the current implementation.",
+        "No regressions in responsive layout (4-column on large screens, 2-column on small/medium)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Change the visual style of the Training Environment section (frontend/src/components/landing/GallerySection.tsx) to a noticeably different, more polished gallery presentation while keeping the same 9 gallery images and the section title text unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change style services , training environment sections"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The section heading remains \"Training Environment\" and gallery still displays 9 images.",
+        "Gallery styling is updated (e.g., image tile treatment, spacing, hover/interaction, container styling) without changing the image sources.",
+        "No regressions in responsive behavior (1 column on very small screens, 2 columns on small, 3 columns on large)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files in frontend immutablePaths (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui).",
+    "Keep user-facing text in English."
+  ],
+  "nonGoals": [
+    "No backend (Motoko) changes.",
+    "No changes to contact form behavior, Internet Identity authentication, or admin functionality.",
+    "No new features like lightbox/modals unless explicitly required by the style changes."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wide training banner photo, modern classroom scene (truevolts-slider-1.dim_1600x600.jpg)",
+      "Wide lab/workshop photo with students coding (truevolts-slider-2.dim_1600x600.jpg)",
+      "Wide mentorship/discussion session photo (truevolts-slider-3.dim_1600x600.jpg)",
+      "Wide technology training lab interior photo (truevolts-slider-4.dim_1600x600.jpg)",
+      "Wide group learning session photo (truevolts-slider-5.dim_1600x600.jpg)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the LandingPage as the root view.",
+  "frontend/src/pages/LandingPage.tsx": "Single-page layout composing all landing sections with the LandingSlider positioned below the fixed navbar with proper top padding (pt-16 for navbar height + responsive spacing) to prevent overlap and ensure full-width rendering.",
+  "frontend/src/components/landing/ScrollToHash.tsx": "Utility component that handles smooth scrolling to section anchors on hash changes and initial page load.",
+  "frontend/src/components/landing/Navbar.tsx": "Responsive navigation bar with TRUEVOLTS branding, desktop inline links, mobile hamburger menu, and Enroll Now CTA, now including a Reviews link for the new testimonials section.",
+  "frontend/src/components/landing/HeroSection.tsx": "Hero section with headline, program offerings line, and Get Guidance CTA button linking to contact section.",
+  "frontend/src/components/landing/AboutSection.tsx": "About section displaying the new TRUEVOLTS institute image alongside descriptive text in a responsive two-column layout.",
+  "frontend/src/components/landing/ServicesSection.tsx": "Services grid displaying four service cards with enhanced styling including gradient overlays, refined hover effects with lift and scale animations, improved icon containers, and stronger typographic hierarchy.",
+  "frontend/src/components/landing/TrainingProgramsSection.tsx": "Training programs section showing six program offerings in a responsive grid layout, now using corporate card styling with consistent sizing, subtle borders/shadows, and refined hover states matching the Services section.",
+  "frontend/src/components/landing/GallerySection.tsx": "Gallery section displaying nine training environment images with polished tile styling, aspect-ratio containers, zoom-on-hover effects, gradient overlays, and numbered badges that appear on interaction.",
+  "frontend/src/components/landing/ContactSection.tsx": "Contact section with responsive two-column layout (stacked on mobile, side-by-side on large screens) containing the contact form on the left and the new address/map component on the right.",
+  "frontend/src/components/landing/Footer.tsx": "Footer displaying current year, TRUEVOLTS branding, and caffeine.ai attribution with heart icon.",
+  "frontend/src/components/landing/WhatsAppFloatingButton.tsx": "Fixed floating WhatsApp button linking to +91 9908665239 via wa.me with accessible label and hover effects.",
+  "frontend/src/components/landing/landingTheme.ts": "Shared design constants for landing page sections, now including corporate styling tokens for consistent section titles, card presentation, icon containers, and typography across Services and Training sections.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook for submitting contact messages to the backend with proper error handling and cache invalidation.",
+  "frontend/src/index.css": "Global styles with OKLCH color system using teal/green primary palette for both light and dark modes, smooth scrolling, and typography settings.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens, border radius, shadows, and font family customization for the TRUEVOLTS design system.",
+  "frontend/src/components/landing/StudentReviewsSection.tsx": "New testimonials section displaying six student reviews from Telangana and Andhra Pradesh with photos, names, locations, and quotes in a responsive card grid layout.",
+  "frontend/src/components/landing/ContactAddressMap.tsx": "Component displaying TRUEVOLTS Research Center address (updated to Ameerpet, Hyderabad location) with MapPin icon and embedded Google Maps iframe using query-based location resolution.",
+  "frontend/src/components/landing/LandingSlider.tsx": "Responsive full-width image carousel using dedicated slider images (truevolts-slider-1 through truevolts-slider-5) with auto-rotation, mobile-optimized navigation arrows, and dot indicators."
+}

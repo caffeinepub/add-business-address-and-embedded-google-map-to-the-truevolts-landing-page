@@ -1,0 +1,90 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Distinct slider assets and refreshed Services + Training Environment styling",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Switch LandingSlider to use a dedicated slider-only image set (no shared filenames with the gallery) while preserving rotation and controls.",
+      "acceptanceCriteria": [
+        "Landing slider images in frontend/src/components/landing/LandingSlider.tsx do not reference any of the gallery image filenames used in frontend/src/components/landing/GallerySection.tsx.",
+        "Slider still auto-rotates and navigation arrows + dot indicators continue to work.",
+        "All slider images have appropriate English alt text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/LandingSlider.tsx",
+          "operation": "modify",
+          "description": "Replace the current slide src list (currently using truevolts-gallery-*.dim_1200x800.jpg) with the dedicated slider images: frontend/public/assets/generated/truevolts-slider-1.dim_1600x600.jpg through frontend/public/assets/generated/truevolts-slider-5.dim_1600x600.jpg; ensure no gallery filenames are referenced, keep the existing auto-rotate interval and arrow/dot navigation behavior intact, and provide clear English alt text for each new slide."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add the new dedicated slider images as static assets and ensure the slider references them without broken images.",
+      "acceptanceCriteria": [
+        "All newly generated slider images exist in frontend/public/assets/generated with the exact filenames specified in this build request.",
+        "LandingSlider.tsx references the new filenames and renders without broken images (no 404s)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/truevolts-slider-1.dim_1600x600.jpg",
+          "operation": "create",
+          "description": "Add the generated static slider image asset: frontend/public/assets/generated/truevolts-slider-1.dim_1600x600.jpg."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevolts-slider-2.dim_1600x600.jpg",
+          "operation": "create",
+          "description": "Add the generated static slider image asset: frontend/public/assets/generated/truevolts-slider-2.dim_1600x600.jpg."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevolts-slider-3.dim_1600x600.jpg",
+          "operation": "create",
+          "description": "Add the generated static slider image asset: frontend/public/assets/generated/truevolts-slider-3.dim_1600x600.jpg."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevolts-slider-4.dim_1600x600.jpg",
+          "operation": "create",
+          "description": "Add the generated static slider image asset: frontend/public/assets/generated/truevolts-slider-4.dim_1600x600.jpg."
+        },
+        {
+          "path": "frontend/public/assets/generated/truevolts-slider-5.dim_1600x600.jpg",
+          "operation": "create",
+          "description": "Add the generated static slider image asset: frontend/public/assets/generated/truevolts-slider-5.dim_1600x600.jpg."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Restyle the Services section into a more polished presentation without changing the four existing services’ icons/titles/descriptions.",
+      "acceptanceCriteria": [
+        "Service titles, descriptions, and icons remain exactly the same strings/icons as before.",
+        "The section has clearly updated styling (layout/spacing/typographic hierarchy/card presentation) compared to the current implementation.",
+        "No regressions in responsive layout (4-column on large screens, 2-column on small/medium)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Update the section/card visual design (e.g., refined container styling, stronger typographic hierarchy, improved card elevation/borders, hover transitions such as subtle lift/scale and icon treatment) while preserving the existing four services array values (same icon components, titles, and descriptions) and keeping the grid breakpoints (sm:grid-cols-2, lg:grid-cols-4) intact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Restyle the Training Environment gallery to a more polished layout while keeping the same title and 9 existing gallery images unchanged.",
+      "acceptanceCriteria": [
+        "The section heading remains \"Training Environment\" and gallery still displays 9 images.",
+        "Gallery styling is updated (e.g., image tile treatment, spacing, hover/interaction, container styling) without changing the image sources.",
+        "No regressions in responsive behavior (1 column on very small screens, 2 columns on small, 3 columns on large)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/GallerySection.tsx",
+          "operation": "modify",
+          "description": "Refresh the gallery presentation (e.g., improved tile styling, consistent image aspect treatment, updated spacing, hover interactions such as zoom/overlay, and more polished container background) while keeping the section title text exactly \"Training Environment\", preserving the same 9 image src values, and retaining the responsive grid behavior (default 1 col, sm 2 cols, lg 3 cols)."
+        }
+      ]
+    }
+  ]
+}
